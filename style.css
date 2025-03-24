@@ -1,0 +1,614 @@
+/* General styling */
+html,
+body,
+.main,
+.block-container,
+.stApp,
+.sidebar-content,
+.css-1d391kg,
+.css-1v3fvcr,
+.css-1lcbmhc,
+.css-1lcbmhc {
+    background: linear-gradient(135deg, #0D0D13 0%, #13131E 100%) !important;
+    color: #E0E0E0 !important;
+}
+
+/* Sidebar styling - Updated selectors */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(135deg, #0D0D13 0%, #13131E 100%) !important;
+    border-right: 1px solid rgba(77, 101, 255, 0.2) !important;
+}
+
+section[data-testid="stSidebar"]>div {
+    background: linear-gradient(135deg, #0D0D13 0%, #13131E 100%) !important;
+}
+
+/* Input styling */
+.stTextInput>div>div>input {
+    background-color: #1E1E1E !important;
+    color: #E0E0E0 !important;
+    border: 1px solid #333 !important;
+    border-radius: 5px !important;
+}
+
+.stTextInput>div>div>input:focus {
+    border-color: #00FFBB !important;
+    box-shadow: 0 0 5px #00FFBB !important;
+}
+
+.stTextInput>div>div>label {
+    color: #E0E0E0 !important;
+}
+
+.stTextInput>div>div>div {
+    color: #E0E0E0 !important;
+}
+
+.main-header {
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 3.2rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    background: linear-gradient(90deg, #00FFBB 0%, #4D65FF 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-fill-color: transparent !important;
+    margin-bottom: 0.5rem !important;
+    text-shadow: 0 0 15px rgba(0, 255, 187, 0.7) !important;
+    animation: pulse-glow 3s infinite alternate !important;
+    position: relative !important;
+    padding-top: 15px !important;
+}
+
+.main-header::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 80px !important;
+    height: 5px !important;
+    background: linear-gradient(90deg, #00FFBB, transparent) !important;
+    border-radius: 5px !important;
+}
+
+.main-header::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -10px !important;
+    right: 0 !important;
+    width: 120px !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, transparent, #4D65FF) !important;
+    border-radius: 5px !important;
+}
+
+@keyframes pulse-glow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 255, 187, 0.3) !important;
+    }
+
+    50% {
+        text-shadow: 0 0 15px rgba(0, 255, 187, 0.5), 0 0 30px rgba(77, 101, 255, 0.3) !important;
+    }
+
+    100% {
+        text-shadow: 0 0 20px rgba(0, 255, 187, 0.7), 0 0 40px rgba(77, 101, 255, 0.5) !important;
+    }
+}
+
+.sub-header {
+    font-size: 1.5rem !important;
+    color: rgba(233, 233, 242, 0.8) !important;
+    margin-bottom: 1.5rem !important;
+    margin-top: 1rem !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.5px !important;
+    position: relative !important;
+    padding-left: 15px !important;
+    border-left: 3px solid #4D65FF !important;
+}
+
+.password-input-label {
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.8rem !important;
+    color: #E9E9F2 !important;
+    letter-spacing: 0.5px !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+}
+
+.password-input-label::before {
+    content: '>' !important;
+    color: #00FFBB !important;
+    margin-right: 8px !important;
+    font-weight: 700 !important;
+    animation: cursor-blink 1s infinite !important;
+}
+
+@keyframes cursor-blink {
+
+    0%,
+    100% {
+        opacity: 1 !important;
+    }
+
+    50% {
+        opacity: 0 !important;
+    }
+}
+
+/* Modern card styling with glowing borders */
+.result-section {
+    background: linear-gradient(135deg, #171722 0%, #20203A 100%) !important;
+    border-radius: 8px !important;
+    padding: 25px !important;
+    margin: 15px 0 !important;
+    border: 1px solid rgba(77, 101, 255, 0.3) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+.result-section::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, #00FFBB, #4D65FF) !important;
+    opacity: 0.8 !important;
+}
+
+.result-section:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6) !important;
+    border-color: rgba(77, 101, 255, 0.6) !important;
+}
+
+.result-section:hover::before {
+    opacity: 1 !important;
+    animation: border-flow 2s linear infinite !important;
+}
+
+@keyframes border-flow {
+    0% {
+        background-position: 0% 0 !important;
+    }
+
+    100% {
+        background-position: 100% 0 !important;
+    }
+}
+
+.strength-header {
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.8rem !important;
+    color: #00FFBB !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    position: relative !important;
+    display: inline-block !important;
+    padding-bottom: 5px !important;
+}
+
+.strength-header::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 60% !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, #00FFBB, transparent) !important;
+}
+
+.warning {
+    color: #FF416C !important;
+    font-weight: bold !important;
+    background: rgba(255, 65, 108, 0.1) !important;
+    padding: 12px 15px !important;
+    border-radius: 5px !important;
+    border-left: 3px solid #FF416C !important;
+    display: flex !important;
+    align-items: center !important;
+    margin: 15px 0 !important;
+}
+
+.tip-title {
+    font-weight: bold !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 0.5rem !important;
+    color: #FF00FF !important;
+    text-shadow: 0 0 5px rgba(255, 0, 255, 0.5) !important;
+}
+
+.tip-item {
+    margin-bottom: 0.3rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.footer {
+    margin-top: 3rem !important;
+    text-align: center !important;
+    color: #757575 !important;
+    font-size: 0.9rem !important;
+}
+
+/* Modern Cyberpunk Button Style */
+.stButton>button {
+    background: linear-gradient(135deg, rgba(0, 255, 187, 0.1) 0%, rgba(77, 101, 255, 0.1) 100%) !important;
+    color: #00FFBB !important;
+    font-weight: 600 !important;
+    border-radius: 4px !important;
+    padding: 0.8rem 1.5rem !important;
+    border: 1px solid rgba(0, 255, 187, 0.3) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    position: relative !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+}
+
+.stButton>button::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(135deg, rgba(0, 255, 187, 0.4) 0%, rgba(77, 101, 255, 0.4) 100%) !important;
+    opacity: 0 !important;
+    z-index: -1 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.stButton>button::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, #00FFBB, #4D65FF) !important;
+    transform: scaleX(0) !important;
+    transform-origin: right !important;
+    transition: transform 0.4s ease !important;
+}
+
+.stButton>button:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+    border-color: rgba(0, 255, 187, 0.6) !important;
+    color: white !important;
+}
+
+.stButton>button:hover::before {
+    opacity: 1 !important;
+}
+
+.stButton>button:hover::after {
+    transform: scaleX(1) !important;
+    transform-origin: left !important;
+}
+
+.stButton>button:active {
+    transform: translateY(0) scale(0.98) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Section Headers */
+.real-time-header {
+    font-family: 'Rajdhani', sans-serif !important;
+    color: #4D65FF !important;
+    font-weight: 600 !important;
+    font-size: 1.3rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 0.8rem !important;
+    letter-spacing: 1px !important;
+    display: flex !important;
+    align-items: center !important;
+    text-transform: uppercase !important;
+}
+
+.real-time-header::before {
+    content: '' !important;
+    display: inline-block !important;
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, #00FFBB 0%, #4D65FF 100%) !important;
+    margin-right: 10px !important;
+    box-shadow: 0 0 10px rgba(0, 255, 187, 0.5) !important;
+    animation: pulse 2s infinite !important;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) !important;
+        opacity: 1 !important;
+    }
+
+    50% {
+        transform: scale(1.2) !important;
+        opacity: 0.7 !important;
+    }
+
+    100% {
+        transform: scale(1) !important;
+        opacity: 1 !important;
+    }
+}
+
+/* Strength Colors with Neon Effect */
+.strength-weak {
+    color: #FF073A !important;
+    text-shadow: 0 0 5px #FF073A !important;
+}
+
+.strength-medium {
+    color: #FFAA00 !important;
+    text-shadow: 0 0 5px #FFAA00 !important;
+}
+
+.strength-strong {
+    color: #00FF66 !important;
+    text-shadow: 0 0 5px #00FF66 !important;
+}
+
+/* Password History Styling */
+.history-container {
+    background-color: #1E1E1E !important;
+    border-radius: 10px !important;
+    padding: 15px !important;
+    margin-top: 20px !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 0 5px rgba(0, 255, 102, 0.2) !important;
+}
+
+.history-header {
+    color: #00FFFF !important;
+    font-weight: bold !important;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 10px !important;
+}
+
+.history-item {
+    padding: 8px !important;
+    margin-bottom: 8px !important;
+    border-radius: 5px !important;
+    background-color: #2A2A2A !important;
+    transition: all 0.2s ease !important;
+    border-left: 3px solid !important;
+}
+
+.history-item:hover {
+    transform: translateX(5px) !important;
+    box-shadow: 0 0 8px rgba(0, 255, 102, 0.3) !important;
+}
+
+.history-weak {
+    border-left-color: #FF073A !important;
+}
+
+.history-medium {
+    border-left-color: #FFAA00 !important;
+}
+
+.history-strong {
+    border-left-color: #00FF66 !important;
+}
+
+.clear-button {
+    background-color: #333 !important;
+    color: #FF073A !important;
+    border: none !important;
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    font-size: 0.8rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.clear-button:hover {
+    background-color: #FF073A !important;
+    color: #121212 !important;
+}
+
+/* Fun result message styling */
+.fun-result {
+    margin-top: 15px !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+    text-align: center !important;
+    animation: fadeIn 0.5s ease !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0 !important;
+        transform: translateY(-10px) !important;
+    }
+
+    to {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+}
+
+/* Modern sidebar section styling */
+.custom-section {
+    background: linear-gradient(135deg, #171722 0%, #1A1A2E 100%) !important;
+    border-radius: 8px !important;
+    padding: 20px 15px !important;
+    margin-top: 20px !important;
+    border: 1px solid rgba(77, 101, 255, 0.2) !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.custom-section::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, #00FFBB, #4D65FF) !important;
+    opacity: 0.5 !important;
+}
+
+.custom-section:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(-3px) !important;
+    border-color: rgba(77, 101, 255, 0.4) !important;
+}
+
+.custom-section:hover::before {
+    opacity: 1 !important;
+}
+
+.custom-section-header {
+    font-family: 'Rajdhani', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1.2rem !important;
+    color: #00FFBB !important;
+    margin-bottom: 15px !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    display: flex !important;
+    align-items: center !important;
+    border-bottom: 1px solid rgba(77, 101, 255, 0.2) !important;
+    padding-bottom: 10px !important;
+}
+
+.custom-section-header::before {
+    content: '' !important;
+    display: inline-block !important;
+    width: 10px !important;
+    height: 10px !important;
+    background: linear-gradient(135deg, #00FFBB, #4D65FF) !important;
+    margin-right: 8px !important;
+    border-radius: 2px !important;
+    transform: rotate(45deg) !important;
+}
+
+/* Make st.progress bars more neon with better contrast */
+div.stProgress>div>div {
+    background-color: #00FFBB !important;
+    box-shadow: 0 0 8px #00FFBB !important;
+}
+
+/* Override streamlit progress bar text to ensure better visibility */
+div.stProgress>div>div>div {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    text-shadow: 0 0 2px #000000, 0 0 3px #000000 !important;
+    background-color: transparent !important;
+    padding: 0 8px !important;
+}
+
+/* Improve visibility of all text in result sections */
+.result-section {
+    background: transparent !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin: 15px 0 !important;
+    border: 1px solid rgba(0, 255, 187, 0.4) !important;
+    box-shadow: 0 0 15px rgba(0, 255, 187, 0.15) !important;
+}
+
+.result-section p,
+.result-section li {
+    color: #FFFFFF !important;
+}
+
+/* Make all markdown text more visible */
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #FFFFFF !important;
+}
+
+/* Make captions more visible */
+.css-1offfwp {
+    color: #B8E6FF !important;
+    opacity: 0.9 !important;
+}
+
+/* Better styling for markdown headers */
+h3,
+h4 {
+    color: #00FFBB !important;
+    text-shadow: 0 0 10px rgba(0, 255, 187, 0.3) !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Tooltip hover effect */
+.tooltip {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden !important;
+    width: 120px !important;
+    background-color: #2A2A2A !important;
+    color: #E0E0E0 !important;
+    text-align: center !important;
+    border-radius: 6px !important;
+    padding: 5px !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    bottom: 125% !important;
+    left: 50% !important;
+    margin-left: -60px !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s !important;
+    font-size: 0.8rem !important;
+    border: 1px solid #00FF66 !important;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Override progress bar text styling */
+div.stProgress>div>div>div {
+    background-color: rgba(45, 45, 45, 0.8) !important;
+    /* Muted gray background */
+    color: #E0E0E0 !important;
+    /* Light text color for better visibility */
+    font-weight: 600 !important;
+    padding: 4px 8px !important;
+    border-radius: 4px !important;
+    text-shadow: none !important;
+    /* Remove text shadow */
+    margin: 0 4px !important;
+}
+
+/* Add padding to main content to prevent footer overlap */
+.block-container {
+    padding-bottom: 60px !important;
+}
