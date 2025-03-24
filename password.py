@@ -1,12 +1,14 @@
 import re
+import secrets
+import string
 import streamlit as st
 from datetime import datetime
 
 #page styling
-st.set_page_config(page_title= "Password Strength Meter", page_icon="🔑", layout="centered")
+st.set_page_config(page_title= "PassCheck: Password Validator", page_icon="🛡️", layout="centered")
 
 
-st.title("Password Strength Meter")
+st.title("🔑 PassCheck: Password Validator")
 st.markdown("Instantly assess how secure your password is.")
 
 # Sidebar Title
@@ -142,6 +144,11 @@ def check_password(password):
     st.markdown(f"{'✅' if has_digit else '❌'} **Numbers**")
     st.markdown(f"{'✅' if has_special else '❌'} **Special characters**")
 
+# Function to generate a strong password
+def generate_password(length=12):
+    characters = string.ascii_letters + string.digits + "!@#$%^&*()_+{}|:\"<>?\[\];',./`~\\"
+    return ''.join(secrets.choice(characters) for _ in range(length))
+
 password = st.text_input("Input a password to check its strength:", type="password", help="Create a strong password at least 8 characters long with a mix of letters, numbers, and symbols.")
 st.caption("🔒 All analysis is done locally in your browser, keeping your password secure.")
 
@@ -151,6 +158,23 @@ if st.button("Check Strength"):
     else:
         st.warning("please enter your password first")
 
+# Password Generator Feature
+st.markdown("---")
+st.subheader("🔹 Need a Strong Password? Generate One Instantly!")
+
+if st.button("⚡ Generate Strong Password"):
+    new_password = generate_password()
+    st.markdown("Here is a strong password:")
+    st.code(new_password, language="plaintext", line_numbers=False)
+    # Caption aligned to the right
+    st.markdown(
+        f"""
+        <div style="display: flex; justify-content: flex-end; font-size: 0.9em; font-style: italic; color: gray;">
+            Copy and use this password securely!
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 st.markdown("---")
 st.markdown("Created with ❤️ by Urooj Sadiq - [Connect on LinkedIn](https://www.linkedin.com/in/urooj-sadiq-a91031212/)")
